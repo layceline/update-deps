@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":timezone(Europe/Paris)",
+    "schedule:weekdays",
+    ":enableVulnerabilityAlerts",
+    ":prHourlyLimit4",
+    ":reviewer(layceline)"
+  ],
+  "assignees": ["layceline"],
+  "lockFileMaintenance": {"enabled": true},
+  "rangeStrategy": "update-lockfile"
+}
