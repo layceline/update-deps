@@ -9,5 +9,14 @@
     ":reviewer(layceline)"
   ],
   "assignees": ["layceline"],
-  "rangeStrategy": "update-lockfile"
+  "rangeStrategy": "update-lockfile",
+  "regexManagers": [
+    {
+      "fileMatch": ["(^|/)Earthfile$"],
+      "matchStrings": [
+        "[ ]*# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\n.*=(?<currentValue>.*?)\\n"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ]
 }
