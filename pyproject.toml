@@ -6,7 +6,7 @@ authors = ["Celine Lay <layceline@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Flask = "^2.2.2"
+Flask = "^3.0.0"
 
 [build-system]
 requires = ["poetry-core"]
